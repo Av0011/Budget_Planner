@@ -1,0 +1,160 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(135deg,rgb(231, 179, 83),rgb(243, 107, 243));
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  resize: both;
+  
+}
+
+.form-container {
+  display: none;
+  max-width: 400px;
+  margin: 20px auto; 
+  padding: 20px;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container.activeForm {
+  display: block; 
+  animation: fadeIn 0.3s ease-in-out; 
+  background-image: linear-gradient(140deg, rgb(220, 148, 148),cyan);
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4caf50;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 15px; 
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.negative {
+  color: red;
+}
+
+.button-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+input,
+textarea{
+  width: 85%;
+}
+
+.button-form{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.button-form > button{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1{
+  text-align: center;
+  font-size: xx-large;
+}
+
+h2{
+  text-align: center;
+  font-size: x-large;
+}
+
+fieldset{
+  margin: 15px;
+  border-radius: 5px;
+  border: 3px solid rgb(50, 171, 205);
+}
+
+legend{
+  font-size: large;
+  font-weight: bold;
+}
